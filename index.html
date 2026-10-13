@@ -1,331 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#180606">
-<title>A Surprise Just for You ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Birthday Surprise 🎂</title>
+<meta name="theme-color" content="#190506">
 <style>
-:root{
-  --bg:#160606;--panel:#260909;--gold:#e8c76a;
-  --cream:#fff1cf;--red:#a20f19;--text:#fff6e7;
-}
+:root{--gold:#ffd36a;--red:#a41427;--bg:#190506;--card:#2a0b10;--text:#fff5e8}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{
-  margin:0;background:var(--bg);color:var(--text);
-  font-family:Georgia,"Times New Roman",serif;
-}
-button{font:inherit;cursor:pointer}
-button:focus-visible,a:focus-visible{outline:2px solid var(--gold)}
-.topbar{
-  position:sticky;top:0;z-index:5;background:#160606ed;
-  border-bottom:1px solid #94743d;padding:13px 16px;
-  display:flex;justify-content:space-between;align-items:center;
-}
-.brand{color:var(--gold);letter-spacing:2px;font-size:12px}
-.menu-btn,.small-btn{
-  color:var(--gold);background:#321010;border:1px solid #94743d;
-  padding:9px 12px;border-radius:8px;
-}
-nav{display:none;padding:12px;background:#220909}
-nav.open{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-nav a{color:var(--cream);text-decoration:none;padding:8px;font-size:13px}
-section{padding:55px 18px;max-width:760px;margin:auto}
-.hero{text-align:center;min-height:88vh;display:flex;flex-direction:column;
-align-items:center;justify-content:center;position:relative;overflow:hidden}
-.eyebrow{color:var(--gold);letter-spacing:4px;font-size:11px}
-h1{font-size:clamp(38px,11vw,68px);line-height:1.05;margin:18px 0;color:var(--gold)}
-h2{color:var(--gold);font-size:30px;text-align:center}
-p{line-height:1.8;color:#f0dfc6}
-.gift{
-  width:190px;height:125px;margin:28px auto 20px;position:relative;
-  background:linear-gradient(145deg,#b91621,#69060c);
-  border:1px solid #d2a347;border-radius:8px;
-  box-shadow:0 0 35px #a10d1d55;transition:.5s;
-}
-.gift:before{content:"";position:absolute;left:42%;width:17%;height:100%;
-background:linear-gradient(90deg,#b8943e,#ffe6a0,#b8943e)}
-.gift:after{content:"";position:absolute;top:43%;height:15%;width:100%;
-background:linear-gradient(#f9df8d,#ad7e28)}
-.bow{position:absolute;top:-24px;left:32%;width:65px;height:34px;
-border:9px solid var(--gold);border-radius:50%;transform:rotate(-12deg)}
-.gift.opened{transform:translateY(-15px) rotate(-4deg);opacity:.2}
-.primary{
-  border:1px solid #ffe3a0;border-radius:30px;padding:14px 24px;
-  color:#270707;background:linear-gradient(135deg,#fff0ad,#c59a3d);
-  font-weight:bold;box-shadow:0 0 22px #c99c4144;
-}
-.secondary{border:1px solid #a88440;border-radius:25px;padding:10px 16px;
-color:var(--gold);background:#2b0c0c}
-.card{
-  background:linear-gradient(145deg,#2a0c0c,#190707);
-  border:1px solid #78552c;border-radius:16px;padding:22px;margin:15px 0;
-  box-shadow:0 12px 35px #0004;
-}
+body{margin:0;background:radial-gradient(ellipse at top,#58121c,var(--bg) 65%);color:var(--text);font-family:system-ui,sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+header{position:sticky;top:0;z-index:5;background:#150506ed;border-bottom:1px solid #8f632b;padding:15px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.logo{font-family:Georgia,serif;font-style:italic;font-size:23px;color:var(--gold)}
+nav{display:flex;gap:14px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-size:13px}
+main{max-width:1100px;margin:auto;padding:25px 18px}
+.hero{text-align:center;padding:65px 12px 35px}
+.kicker{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:12px}
+h1{font-family:Georgia,serif;color:var(--gold);font-size:clamp(42px,8vw,78px);line-height:1.1;margin:16px 0}
+h2{font-family:Georgia,serif;color:var(--gold);font-size:clamp(25px,5vw,38px)}
+p{line-height:1.8}
+.btn{border:1px solid var(--gold);background:linear-gradient(135deg,#ffd36a,#c58a2b);color:#29070a;border-radius:30px;padding:12px 20px;font-weight:700;display:inline-block}
+.btn.secondary{background:transparent;color:var(--gold)}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:22px 0}
+section{margin:28px 0;padding:25px;border:1px solid #825323;border-radius:22px;background:linear-gradient(135deg,#381018dd,#160609ee);box-shadow:0 12px 35px #0003}
 .center{text-align:center}
-.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:25px 0}
-.timebox{background:#2b0c0c;border:1px solid #78552c;border-radius:10px;padding:13px 2px}
-.timebox strong{display:block;color:var(--gold);font-size:25px}
-.timebox span{font-size:9px;letter-spacing:1px;color:#e6d3ae}
-.letter{background:#fff1d7;color:#48251a;border-radius:5px;padding:25px;
-line-height:1.9;box-shadow:0 8px 24px #0005}
-.letter p{color:#48251a}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.photo{
-  min-height:130px;border:1px solid #8c6a36;border-radius:12px;
-  display:flex;align-items:center;justify-content:center;text-align:center;
-  padding:12px;background:linear-gradient(145deg,#4a1515,#1d0909);
-  color:#f1d9a1;overflow:hidden;
-}
-.photo img{width:100%;height:160px;object-fit:cover;border-radius:8px}
-.cake{font-size:95px;filter:drop-shadow(0 0 18px #efb74a77);transition:.4s}
-.cake.cut{transform:rotate(-10deg) scale(.9)}
-.music-row{display:flex;align-items:center;gap:12px;justify-content:center;flex-wrap:wrap}
-input[type=file]{max-width:100%;font-size:12px}
-footer{text-align:center;padding:30px 15px;color:#b69b72;font-size:12px}
-.hidden{display:none!important}
-.spark{
-  position:fixed;top:-20px;z-index:10;pointer-events:none;
-  animation:fall linear forwards;font-size:20px
-}
-@keyframes fall{to{transform:translateY(110vh) rotate(650deg);opacity:0}}
-@keyframes glow{50%{text-shadow:0 0 24px #ffe6a0}}
-h1{animation:glow 3s ease-in-out infinite}
-@media(min-width:600px){
-  nav.open{grid-template-columns:repeat(4,1fr)}
-  .grid{grid-template-columns:repeat(3,1fr)}
-}
+.gift{font-size:100px;display:inline-block;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(3deg)}}
+@keyframes pop{0%{transform:scale(.7);opacity:0}100%{transform:scale(1);opacity:1}}
+.reveal{display:none;animation:pop .6s ease}
+.reveal.show{display:block}
+.letter{background:#f8e3b8;color:#4b2117;border-radius:8px;padding:28px;text-align:left;font-family:Georgia,serif;white-space:pre-wrap;line-height:1.9;box-shadow:0 8px 25px #0005}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.field{display:flex;flex-direction:column;gap:7px;text-align:left}
+input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid #8e5c39;background:#19080b;color:white}
+textarea{min-height:100px;resize:vertical}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px;border:1px solid #d6a84c}
+.gallery figure{margin:0}
+.gallery figcaption{color:var(--gold);padding:7px}
+#cake{font-size:105px;display:block;margin:12px}
+#cake.cut{animation:pop .4s}
+.timer{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:20px 0}
+.timebox{background:#160609;border:1px solid #94602b;border-radius:12px;padding:12px;min-width:75px}
+.timebox strong{display:block;color:var(--gold);font-size:26px}
+.musicbox{display:grid;gap:12px;max-width:520px;margin:20px auto}
+#confetti{position:fixed;inset:0;pointer-events:none;z-index:10;overflow:hidden}
+.piece{position:absolute;top:-20px;animation:fall 3s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.2}}
+footer{text-align:center;color:var(--gold);padding:35px 15px}
+.small{font-size:12px;color:#d8bca6}
+body.pink{--gold:#ffc0df;--red:#d43b86;--card:#42102e;--bg:#21091c}
+body.blue{--gold:#9fe8ff;--red:#2687bc;--card:#0e3045;--bg:#061521}
+body.green{--gold:#c9ffad;--red:#388c55;--card:#123c27;--bg:#06170e}
+@media(max-width:600px){header{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding-top:40px}section{padding:18px}.letter{padding:20px}}
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">✦ A LITTLE MAGIC ✦</div>
-  <button class="menu-btn" id="menuBtn">☰ MENU</button>
+<div id="confetti"></div>
+<header>
+  <div class="logo">🎁 Birthday Surprise</div>
+  <nav>
+    <a href="#home">Home</a><a href="#memories">Memories</a>
+    <a href="#letter">Message</a><a href="#gallery">Gallery</a>
+    <a href="#surprise">Surprise</a>
+  </nav>
 </header>
-<nav id="navigation">
-  <a href="#home">Home</a><a href="#countdown">Countdown</a>
-  <a href="#letter">Your Letter</a><a href="#memories">Memories</a>
-  <a href="#cake">Cake Cutting</a><a href="#music">Music</a>
-</nav>
 
 <main>
 <section class="hero" id="home">
-  <div class="eyebrow">✦ A SURPRISE MADE WITH LOVE ✦</div>
-  <h1>Happy Birthday,<br><span id="heroName">Beautiful Soul</span>!</h1>
-  <p>Someone has prepared a little magic just for you.</p>
-  <div class="gift" id="giftBox"><div class="bow"></div></div>
-  <button class="primary" id="openGift">🎁 OPEN YOUR SURPRISE</button>
-  <p id="giftMessage" class="hidden">✨ Surprise! You make this world brighter. ✨</p>
-  <button class="secondary" id="celebrate">🎊 Celebrate!</button>
+  <div class="kicker">A special day • A special person</div>
+  <h1>Happy Birthday <span id="heroName">Dear Friend</span> ♡</h1>
+  <p id="intro">আজকের দিনটা হোক হাসি, ভালোবাসা আর সুন্দর স্মৃতিতে ভরা।</p>
+  <div class="actions">
+    <button class="btn" onclick="openSurprise()">🎁 Open Your Surprise</button>
+    <button class="btn secondary" onclick="sharePage()">🔗 Share Wish</button>
+  </div>
+  <div class="gift">🎁</div>
+  <p style="color:var(--gold)">A little surprise, made with love ✨</p>
 </section>
 
-<section id="countdown">
-  <div class="eyebrow center">THE SPECIAL DAY</div>
-  <h2>Our Countdown ✨</h2>
-  <p class="center">Counting down to a beautiful moment.</p>
-  <div class="card center">
-    <div class="timer">
-      <div class="timebox"><strong id="days">00</strong><span>DAYS</span></div>
-      <div class="timebox"><strong id="hours">00</strong><span>HOURS</span></div>
-      <div class="timebox"><strong id="minutes">00</strong><span>MINUTES</span></div>
-      <div class="timebox"><strong id="seconds">00</strong><span>SECONDS</span></div>
-    </div>
-    <label for="eventDate">Choose the special date:</label><br><br>
-    <input id="eventDate" type="datetime-local">
-    <button class="secondary" id="setDate">Set Countdown</button>
-    <p id="countdownMessage"></p>
+<section class="center" id="surprise">
+  <h2>Your Surprise Awaits</h2>
+  <p>নিচের বাটনে ক্লিক করো, তোমার জন্য রাখা সারপ্রাইজটি খুলে যাবে।</p>
+  <button class="btn" onclick="openSurprise()">💝 Reveal My Surprise</button>
+  <div id="surpriseContent" class="reveal">
+    <h2>✨ Surprise! ✨</h2>
+    <p id="surpriseText">তুমি সত্যিই স্পেশাল। তোমার প্রতিটি দিন আনন্দে ভরে উঠুক!</p>
+    <div style="font-size:60px">🎂 💐 🎈</div>
   </div>
+</section>
+
+<section class="center" id="memories">
+  <h2>🎂 Birthday Countdown</h2>
+  <p>তোমার বিশেষ দিনের জন্য অপেক্ষা চলছে!</p>
+  <div class="timer">
+    <div class="timebox"><strong id="days">--</strong>দিন</div>
+    <div class="timebox"><strong id="hours">--</strong>ঘণ্টা</div>
+    <div class="timebox"><strong id="mins">--</strong>মিনিট</div>
+    <div class="timebox"><strong id="secs">--</strong>সেকেন্ড</div>
+  </div>
+  <label class="field">Birthday date & time
+    <input type="datetime-local" id="birthdayDate">
+  </label>
+  <p class="small">তারিখ বেছে নিলে কাউন্টডাউন শুরু হবে।</p>
 </section>
 
 <section id="letter">
-  <div class="eyebrow center">A MESSAGE FROM THE HEART</div>
-  <h2>A Letter for You 💌</h2>
-  <div class="letter">
-    <p>Dear <strong id="letterName">Beautiful Soul</strong>,</p>
-    <p>Today is a reminder of how special you are. May your days be filled with laughter, your dreams find their way to reality, and your heart always find reasons to smile.</p>
-    <p>May this new chapter bring you beautiful memories, kind people and countless moments worth celebrating.</p>
-    <p>Keep shining. The world is brighter with you in it.</p>
-    <p>With lots of love, ❤️<br><strong id="senderName">Someone Who Cares</strong></p>
+  <h2 class="center">💌 A Letter For You</h2>
+  <div class="letter" id="letterText">প্রিয় Dear Friend,
+
+শুভ জন্মদিন! ❤️
+
+তোমার জীবনের প্রতিটি নতুন দিন নিয়ে আসুক নতুন আশা, সুন্দর মুহূর্ত আর অনেক আনন্দ। তোমার স্বপ্নগুলো পূরণ হোক, তোমার মুখে হাসি থাকুক, আর পাশে থাকুক তোমার প্রিয় মানুষগুলো।
+
+আজকের দিনটি তোমার মতোই সুন্দর হোক। সবসময় ভালো থেকো, নিজের যত্ন নিও এবং নিজের স্বপ্নের পথে এগিয়ে চলো।
+
+অনেক অনেক শুভেচ্ছা ও ভালোবাসা! 🎂💖</div>
+</section>
+
+<section class="center">
+  <h2>🎂 Make A Wish</h2>
+  <div id="cake">🎂</div>
+  <button class="btn" onclick="cutCake()">🎉 Cut The Cake</button>
+  <p id="cakeMessage">একটা ইচ্ছা করো, তারপর কেক কাটো! ✨</p>
+</section>
+
+<section id="gallery">
+  <h2 class="center">📸 Beautiful Memories</h2>
+  <p class="center">নিজের ডিভাইস থেকে ছবি বেছে নাও।</p>
+  <label class="field">Choose photos
+    <input type="file" id="photos" accept="image/*" multiple>
+  </label>
+  <div class="grid gallery" id="photoGrid" style="margin-top:18px"></div>
+</section>
+
+<section>
+  <h2 class="center">🎵 Birthday Music</h2>
+  <div class="musicbox">
+    <label class="field">Choose an audio file
+      <input type="file" id="musicFile" accept="audio/*">
+    </label>
+    <audio id="player" controls style="width:100%;display:none"></audio>
+    <p class="small center">নিজের অডিও ফাইল ব্যবহার করো, অথবা ব্যবহারের অনুমতি থাকা মিউজিক বেছে নাও।</p>
   </div>
 </section>
 
-<section id="memories">
-  <div class="eyebrow center">LITTLE MOMENTS, BIG MEMORIES</div>
-  <h2>Memory Gallery 📸</h2>
-  <p class="center">Choose photos from your phone to personalize this demo.</p>
-  <div class="card center">
-    <input type="file" id="photoPicker" accept="image/*" multiple>
-    <div class="grid" id="photoGrid" style="margin-top:18px">
-      <div class="photo">♡<br>Memory One</div>
-      <div class="photo">✦<br>Memory Two</div>
-      <div class="photo">♡<br>Memory Three</div>
-      <div class="photo">✦<br>Memory Four</div>
-    </div>
-  </div>
-</section>
-
-<section id="cake">
-  <div class="eyebrow center">MAKE A WISH</div>
-  <h2>Time to Cut the Cake! 🎂</h2>
-  <div class="card center">
-    <div class="cake" id="cakeEmoji">🎂</div>
-    <p id="cakeMessage">Close your eyes, make a wish, and tap below!</p>
-    <button class="primary" id="cutCake">🔪 Cut the Cake</button>
-  </div>
-</section>
-
-<section id="music">
-  <div class="eyebrow center">A SOUNDTRACK FOR THE DAY</div>
-  <h2>Birthday Music 🎵</h2>
-  <div class="card center">
-    <p>Upload an audio file from your phone, or choose a royalty-free track you have permission to use.</p>
-    <div class="music-row">
-      <input type="file" id="musicPicker" accept="audio/*">
-      <button class="secondary" id="musicToggle">▶ Play / Pause</button>
-    </div>
-    <p id="musicStatus">No track selected.</p>
-    <audio id="audioPlayer" controls loop class="hidden" style="width:100%"></audio>
-    <p style="font-size:12px">Music starts only after you press Play.</p>
-  </div>
-</section>
-
-<section id="theme">
-  <div class="eyebrow center">MAKE IT YOURS</div>
-  <h2>Choose Your Theme 🎨</h2>
+<section>
+  <h2 class="center">🎨 Personalize Your Wish</h2>
   <div class="grid">
-    <button class="secondary" data-theme="red">❤️ Red & Gold</button>
-    <button class="secondary" data-theme="pink">💗 Pink Romance</button>
-    <button class="secondary" data-theme="blue">💙 Midnight Blue</button>
-    <button class="secondary" data-theme="green">💚 Emerald Gold</button>
+    <label class="field">Birthday person's name
+      <input id="nameInput" placeholder="যেমন: Sumi">
+    </label>
+    <label class="field">Theme
+      <select id="theme">
+        <option value="">Classic Red & Gold</option>
+        <option value="pink">Pink Dream</option>
+        <option value="blue">Midnight Blue</option>
+        <option value="green">Emerald Green</option>
+      </select>
+    </label>
+    <label class="field">Short birthday message
+      <textarea id="introInput" placeholder="তোমার মেসেজ লিখো..."></textarea>
+    </label>
+    <label class="field">Surprise message
+      <textarea id="surpriseInput" placeholder="সারপ্রাইজে কী লেখা থাকবে?"></textarea>
+    </label>
+    <label class="field">Personal letter
+      <textarea id="letterInput" placeholder="নিজের চিঠি লিখো..."></textarea>
+    </label>
   </div>
-</section>
-
-<section id="personalize">
-  <div class="eyebrow center">A PERSONAL TOUCH</div>
-  <h2>Personalize the Demo ✨</h2>
-  <div class="card">
-    <label>Birthday person's name</label>
-    <input id="nameInput" value="Beautiful Soul" style="width:100%;padding:12px;margin:8px 0 16px">
-    <label>Your name / sender</label>
-    <input id="senderInput" value="Someone Who Cares" style="width:100%;padding:12px;margin:8px 0 16px">
-    <button class="primary" id="applyNames">Update Names</button>
-    <p style="font-size:12px">This demo changes the current page only. Permanent client links will be added in a later version.</p>
+  <div class="actions">
+    <button class="btn" onclick="applySettings()">Apply Changes</button>
+    <button class="btn secondary" onclick="resetSettings()">Reset Demo</button>
   </div>
+  <p class="small center">এই Demo-তে পরিবর্তনগুলো বর্তমান ব্রাউজার সেশনে থাকে। আলাদা লিংকে স্থায়ীভাবে সংরক্ষণের জন্য পরে Database লাগবে।</p>
 </section>
 </main>
-<footer>MADE WITH ❤️ AND A LITTLE MAGIC<br>Premium Birthday Surprise Demo</footer>
+
+<footer>
+  <div style="font-size:27px">♡ Once Again, Happy Birthday! ♡</div>
+  <p>Made with ❤️ and a little bit of magic.</p>
+  <button class="btn secondary" onclick="sharePage()">Share This Birthday Wish</button>
+</footer>
 
 <script>
 const $ = id => document.getElementById(id);
-const nav = $("navigation");
 
-$("menuBtn").addEventListener("click", () => nav.classList.toggle("open"));
-nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => nav.classList.remove("open")));
+function openSurprise(){
+  $("surpriseContent").classList.add("show");
+  confetti();
+  $("surpriseContent").scrollIntoView({behavior:"smooth",block:"center"});
+}
 
-function confetti(count=65){
-  const symbols=["✨","✦","♥","🎉","✧","•"];
-  for(let i=0;i<count;i++){
-    const el=document.createElement("span");
-    el.className="spark";
-    el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
-    el.style.left=Math.random()*100+"vw";
-    el.style.animationDuration=(2+Math.random()*3)+"s";
-    el.style.fontSize=(12+Math.random()*18)+"px";
-    document.body.appendChild(el);
-    setTimeout(()=>el.remove(),5200);
+function confetti(){
+  const box=$("confetti");
+  const colors=["#ffd36a","#ff5577","#ffffff","#ff9d36","#f8c5ff"];
+  for(let i=0;i<75;i++){
+    const p=document.createElement("span");
+    p.className="piece";
+    p.textContent=["✦","♥","•","✨"][Math.floor(Math.random()*4)];
+    p.style.left=Math.random()*100+"%";
+    p.style.color=colors[Math.floor(Math.random()*colors.length)];
+    p.style.fontSize=(10+Math.random()*18)+"px";
+    p.style.animationDuration=(2+Math.random()*2)+"s";
+    box.appendChild(p);
+    setTimeout(()=>p.remove(),4500);
   }
 }
-$("openGift").addEventListener("click",()=>{
-  $("giftBox").classList.add("opened");
-  $("giftMessage").classList.remove("hidden");
-  $("openGift").textContent="💖 SURPRISE OPENED!";
-  confetti(100);
-});
-$("celebrate").addEventListener("click",()=>confetti(80));
 
-let targetDate=null;
-$("setDate").addEventListener("click",()=>{
-  const value=$("eventDate").value;
-  if(!value){$("countdownMessage").textContent="Please choose a date first.";return}
-  targetDate=new Date(value);
-  if(Number.isNaN(targetDate.getTime())){$("countdownMessage").textContent="Please choose a valid date.";return}
-  $("countdownMessage").textContent="Countdown set!";
-});
+function cutCake(){
+  $("cake").classList.remove("cut");
+  void $("cake").offsetWidth;
+  $("cake").classList.add("cut");
+  $("cakeMessage").textContent="🎉 শুভ জন্মদিন! তোমার সুন্দর ইচ্ছাটি পূরণ হোক! 💖";
+  confetti();
+}
+
+function applySettings(){
+  const name=$("nameInput").value.trim()||"Dear Friend";
+  $("heroName").textContent=name;
+  $("intro").textContent=$("introInput").value.trim()||"আজকের দিনটা হোক হাসি, ভালোবাসা আর সুন্দর স্মৃতিতে ভরা।";
+  $("surpriseText").textContent=$("surpriseInput").value.trim()||"তুমি সত্যিই স্পেশাল। তোমার প্রতিটি দিন আনন্দে ভরে উঠুক!";
+  $("letterText").textContent=$("letterInput").value.trim()||`প্রিয় ${name},\n\nশুভ জন্মদিন! ❤️\n\nতোমার জীবন ভরে উঠুক আনন্দ, ভালোবাসা আর সুন্দর স্মৃতিতে। নিজের যত্ন নিও এবং সবসময় হাসিখুশি থেকো।\n\nঅনেক অনেক শুভেচ্ছা! 🎂💖`;
+  document.body.className=$("theme").value;
+  confetti();
+}
+
+function resetSettings(){
+  $("nameInput").value="";
+  $("introInput").value="";
+  $("surpriseInput").value="";
+  $("letterInput").value="";
+  $("theme").value="";
+  $("heroName").textContent="Dear Friend";
+  $("intro").textContent="আজকের দিনটা হোক হাসি, ভালোবাসা আর সুন্দর স্মৃতিতে ভরা।";
+  $("surpriseText").textContent="তুমি সত্যিই স্পেশাল। তোমার প্রতিটি দিন আনন্দে ভরে উঠুক!";
+  $("letterText").textContent="প্রিয় Dear Friend,\n\nশুভ জন্মদিন! ❤️\n\nতোমার জীবনের প্রতিটি দিন সুন্দর হোক। তোমার স্বপ্নগুলো পূরণ হোক, আর পাশে থাকুক তোমার প্রিয় মানুষগুলো।\n\nঅনেক অনেক শুভেচ্ছা! 🎂💖";
+  document.body.className="";
+}
+
+let timer;
 function updateCountdown(){
-  if(!targetDate){
-    ["days","hours","minutes","seconds"].forEach(id=>$(id).textContent="00");
-    return;
-  }
-  let diff=targetDate.getTime()-Date.now();
+  const value=$("birthdayDate").value;
+  if(!value)return;
+  const target=new Date(value).getTime();
+  const diff=target-Date.now();
   if(diff<=0){
-    ["days","hours","minutes","seconds"].forEach(id=>$(id).textContent="00");
-    $("countdownMessage").textContent="It's the special moment! 🎉";
+    ["days","hours","mins","secs"].forEach(id=>$(id).textContent="0");
     return;
   }
-  const d=Math.floor(diff/86400000);diff%=86400000;
-  const h=Math.floor(diff/3600000);diff%=3600000;
-  const m=Math.floor(diff/60000);const s=Math.floor(diff/1000)%60;
-  $("days").textContent=d;$("hours").textContent=String(h).padStart(2,"0");
-  $("minutes").textContent=String(m).padStart(2,"0");
-  $("seconds").textContent=String(s).padStart(2,"0");
+  $("days").textContent=Math.floor(diff/86400000);
+  $("hours").textContent=Math.floor(diff%86400000/3600000);
+  $("mins").textContent=Math.floor(diff%3600000/60000);
+  $("secs").textContent=Math.floor(diff%60000/1000);
 }
-setInterval(updateCountdown,1000);updateCountdown();
+$("birthdayDate").addEventListener("input",updateCountdown);
+timer=setInterval(updateCountdown,1000);
 
-$("photoPicker").addEventListener("change",e=>{
-  const grid=$("photoGrid");grid.innerHTML="";
-  [...e.target.files].slice(0,12).forEach(file=>{
+const objectUrls=[];
+$("photos").addEventListener("change",e=>{
+  const grid=$("photoGrid");
+  [...e.target.files].forEach(file=>{
     if(!file.type.startsWith("image/"))return;
     const url=URL.createObjectURL(file);
-    const box=document.createElement("div");box.className="photo";
-    const img=document.createElement("img");img.src=url;img.alt="Selected memory";
-    box.appendChild(img);grid.appendChild(box);
-  });
-  if(!grid.children.length)grid.innerHTML='<div class="photo">Choose photos to begin</div>';
-});
-$("cutCake").addEventListener("click",()=>{
-  $("cakeEmoji").classList.toggle("cut");
-  $("cakeEmoji").textContent=$("cakeEmoji").classList.contains("cut")?"🍰":"🎂";
-  $("cakeMessage").textContent="Your wish is on its way! ✨";
-  confetti(45);
-});
-
-const audio=$("audioPlayer");
-let currentAudioURL=null;
-$("musicPicker").addEventListener("change",e=>{
-  const file=e.target.files[0];if(!file)return;
-  if(currentAudioURL)URL.revokeObjectURL(currentAudioURL);
-  currentAudioURL=URL.createObjectURL(file);
-  audio.src=currentAudioURL;audio.classList.remove("hidden");
-  $("musicStatus").textContent="Selected: "+file.name;
-});
-$("musicToggle").addEventListener("click",async()=>{
-  if(!audio.src){$("musicStatus").textContent="Choose an audio file first.";return}
-  if(audio.paused){
-    try{await audio.play();$("musicStatus").textContent="Music is playing 🎵"}
-    catch(e){$("musicStatus").textContent="Tap Play on the audio player to start."}
-  }else{audio.pause();$("musicStatus").textContent="Music paused."}
-});
-
-const themes={
-  red:{bg:"#160606",panel:"#260909",gold:"#e8c76a",cream:"#fff1cf",red:"#a20f19",text:"#fff6e7"},
-  pink:{bg:"#210b18",panel:"#391027",gold:"#ffb5d2",cream:"#ffe5ef",red:"#c92e76",text:"#fff1f7"},
-  blue:{bg:"#071225",panel:"#10213c",gold:"#a9d7ff",cream:"#d9eaff",red:"#164c91",text:"#f1f7ff"},
-  green:{bg:"#071a13",panel:"#103326",gold:"#d9d08a",cream:"#f1efce",red:"#206b4c",text:"#f4ffef"}
-};
-document.querySelectorAll("[data-theme]").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const t=themes[btn.dataset.theme];
-    Object.entries(t).forEach(([key,value])=>document.documentElement.style.setProperty("--"+key,value));
+    objectUrls.push(url);
+    const fig=document.createElement("figure");
+    const img=document.createElement("img");
+    img.src=url;
+    img.alt="Birthday memory";
+    const caption=document.createElement("figcaption");
+    caption.textContent=file.name;
+    fig.append(img,caption);
+    grid.appendChild(fig);
   });
 });
-$("applyNames").addEventListener("click",()=>{
-  const name=$("nameInput").value.trim()||"Beautiful Soul";
-  const sender=$("senderInput").value.trim()||"Someone Who Cares";
-  $("heroName").textContent=name;
-  $("letterName").textContent=name;
-  $("senderName").textContent=sender;
+
+let musicUrl="";
+$("musicFile").addEventListener("change",e=>{
+  const file=e.target.files[0];
+  if(!file)return;
+  if(musicUrl)URL.revokeObjectURL(musicUrl);
+  musicUrl=URL.createObjectURL(file);
+  $("player").src=musicUrl;
+  $("player").style.display="block";
 });
+
+async function sharePage(){
+  const data={
+    title:"Birthday Surprise 🎂",
+    text:"তোমার জন্য একটি Birthday Surprise! ❤️",
+    url:location.href
+  };
+  if(navigator.share){
+    try{await navigator.share(data)}catch(e){}
+  }else if(navigator.clipboard){
+    try{
+      await navigator.clipboard.writeText(location.href);
+      alert("Website link copied!");
+    }catch(e){prompt("Copy this link:",location.href)}
+  }else{
+    prompt("Copy this link:",location.href);
+  }
+}
 </script>
 </body>
-  </html>
+</html>
